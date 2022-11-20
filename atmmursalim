@@ -1,0 +1,50 @@
+print("---------------------------")
+print("-------ATM MURSALIM----------")
+print("----------------------------")
+print("                 CODE ATM               ")
+print()
+print("1.Mengecek Saldo\n2.Jumlah Saldo\n3.Penarikan Saldo\n4.Transfer Saldo")
+saldo = 10_000_000
+pilih = int(input("masukkan pilihan anda: "))
+if pilih == 1:
+    print()
+    print("----Cek Saldo----")
+    print("----Saldo anda Rp.",saldo,"----")
+    print("=============================")    
+    
+elif pilih == 2:
+    print()
+    print("Isi saldo!")
+    ij = int(input("Masukkan jumlah saldo (minimum 50.000) Rp."))
+    if ij >= 50000 :
+        print(ij+saldo)
+    else:
+        print("jumlah minimum tidak mencukupi!!")
+elif pilih == 3:
+    print()
+    print("penarikan saldo!")
+    pS = int(input("Masukkan jumlah saldo: Rp."))
+    if saldo >= pS:
+        print("Saldo anda Rp.",saldo-pS)
+        
+    else:
+        print("Saldo anda Kurang !!")
+elif pilih == 4:
+    print()
+    print("masukkan No ATM!")
+    no.rek = int(input(""))
+    nominal = int(input("MAsukkan nominal :Rp."))
+    if nominal <= saldo:
+        print("Transaksi ke No rek", no.rek)
+        print("senilai",nominal,"berhasil")
+        print()
+        print("saldo anda : Rp.",saldo-nominal)
+    else:
+        print()
+        print("saldo tidak mencukupi !")
+        print("silahkan lakukan pengisian saldo\nsebelum melakukan transaksi lagi")
+else:
+    print()
+    print("pilihan tidak di temukan!")
+    
+    
